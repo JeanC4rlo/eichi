@@ -13,6 +13,7 @@ export DB_USER=
 export DB_PASSWORD=
 export DB_DRIVER=
 export DB_DIALECT=
+export JWT_SECRET=
 ```
 
 As informações necessárias são a seguintes:
@@ -22,8 +23,9 @@ As informações necessárias são a seguintes:
 - `DB_PASSWORD`: senha para o usuário usuado no banco de dados.
 - `DB_DRIVER`: identificador do driver usado no banco de dados.
 - `DB_DIALECT`: dialeto usado no banco de dados.
+- `JWT_SECRET`: chave usada para gerar tokens JWT.
 
-Após colocar as informações necessárias, no terminal onde o app será inicializado, use os seguintes comandos:
+Após colocar as informações necessárias, renomeie o arquivo para `.env` e, no terminal onde o app será inicializado, use os seguintes comandos:
 
 1. Na pasta root:
 
