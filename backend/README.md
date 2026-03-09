@@ -1,7 +1,7 @@
 # 📖 Guia de inicialização do backend
 
 > [!WARNING]
-> Todas as informações passadas aqui não foram testadas em todos os possíveis caso, então pode ser que hajam problemas.
+> Todas as informações passadas aqui não foram testadas em todos os possíveis casos, então pode ser que hajam problemas.
 
 ## Configurando o ambiente
 
