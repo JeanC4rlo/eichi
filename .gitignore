@@ -87,3 +87,6 @@ next-env.d.ts
 # Postman specific files/folders
 postman/
 .postman/
+
+# .env files
+.env
