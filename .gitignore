@@ -90,3 +90,7 @@ postman/
 
 # .env files
 .env
+
+# venv folders
+.venv/
+venv/
