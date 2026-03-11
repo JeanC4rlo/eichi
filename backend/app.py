@@ -16,7 +16,7 @@ def create_app():
     app.register_blueprint(auth_bp)
 
     with app.app_context():
-        if os.getenv("FLASK_ENV") != "production":
+        if not os.getenv("FLASK_ENV") == "production":
             db.create_all()
 
     return app
