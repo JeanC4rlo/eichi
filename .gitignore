@@ -84,13 +84,17 @@ next-env.d.ts
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,java,nextjs
 
-# Postman specific files/folders
-postman/
-.postman/
-
 # .env files
 .env
 
 # venv folders
 .venv/
 venv/
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
