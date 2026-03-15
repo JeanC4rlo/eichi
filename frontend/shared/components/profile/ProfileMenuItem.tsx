@@ -8,8 +8,10 @@ interface ProfileMenuItemProps {
 export const ProfileMenuItem = ({ data }: ProfileMenuItemProps): React.ReactElement => {
     return (
         <Link href={data.href} className="
-            inline-block w-full h-full bg-white hover:bg-gray-200 text-center text-lg
-            font-heading">
+            inline-block w-full h-full bg-white hover:bg-gray-200 text-center text-md
+            font-heading hover:bg-tertiary hover:text-white transtion-all ease duration-300
+            py-1
+            ">
             {data.label}
         </Link>
     )

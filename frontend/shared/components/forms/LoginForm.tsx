@@ -69,8 +69,8 @@ export const LoginForm = (): React.ReactElement => {
                 </p>
             )}
             <button type="submit" className="
-                w-full bg-[#8159ec] text-white font-body font-bold rounded-full py-2 mt-8
-                border-2 border-[#8159ec] cursor-pointer hover:bg-white hover:text-[#8159ec] 
+                w-full bg-primary text-white font-body font-bold rounded-full py-2 mt-8
+                border-2 border-primary cursor-pointer hover:bg-white hover:text-primary 
                 transition-all duration-300
             ">
                 Entrar

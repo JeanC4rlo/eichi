@@ -42,8 +42,8 @@ export const ProfileSection = (): React.ReactElement => {
                             flex items-center gap-2 px-3 py-1 cursor-pointer transition-all
                             duration-300 w-full border-2 border-black relative z-10
                             ${isMenuOpen
-                                ? "rounded-t-2xl bg-black text-white"
-                                : "rounded-2xl bg-white hover:bg-black hover:text-white"}
+                                ? "rounded-t-[24px] border-primary bg-primary text-white"
+                                : "rounded-[24px] bg-white hover:border-primary hover:bg-primary hover:text-white"}
                         `}
                     >
                         <UserCircleIcon className="h-[20px] w-[20px]" />
@@ -55,7 +55,7 @@ export const ProfileSection = (): React.ReactElement => {
                     <div
                         className={`
                             absolute top-full left-0 w-full origin-top transition-translate
-                            ease border-t-0 border-2 rounded-b-2xl overflow-hidden
+                            ease border-2 border-primary rounded-b-[24px] overflow-hidden
                             ${isMenuOpen 
                                 ? "opacity-100 pointer-events-auto duration-400 delay-200"
                                 : "opacity-0 pointer-events-none duration-100 delay-0"}
@@ -67,8 +67,8 @@ export const ProfileSection = (): React.ReactElement => {
             ) : (
                 <Link href="/login">
                     <div className="
-                        flex items-center gap-2 px-3 py-1 border-2 border-black rounded-2xl
-                        hover:text-white hover:bg-black transition-all duration-300
+                        flex items-center gap-2 px-3 py-1 border-2 rounded-[24px]
+                        hover:text-white hover:border-primary hover:bg-primary transition-all duration-300
                     ">
                         <UserCircleIcon className="h-[20px] w-[20px]" />
                         <span className="text-lg font-heading">Entrar</span>

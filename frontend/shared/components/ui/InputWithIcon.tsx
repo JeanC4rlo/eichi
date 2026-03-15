@@ -28,7 +28,7 @@ export const InputWithIcon = ({
                 <span className="font-body font-bold">{label}</span>
                 <div className="
                     flex items-center gap-4 border-2 rounded-full px-2 
-                    focus-within:border-[#8159ec] focus-within:bg-[#8159ec]
+                    focus-within:border-primary focus-within:bg-primary
                     focus-within:text-white font-body transition-all duration-300
                     cursor-pointer
                 ">

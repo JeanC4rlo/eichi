@@ -4,4 +4,6 @@
     --font-heading: var(--font-funnel);
     --font-body: var(--font-inter);
     --font-code: var(--font-fira);
+    --color-primary: #8159ec;
+    --color-tertiary: #a78ffc;
 }
