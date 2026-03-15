@@ -22,7 +22,14 @@ class Config:
     if not JWT_SECRET_KEY:
         raise RuntimeError("JWT_SECRET não está definido!")
     
-    JWT_ACCESS_TOKEN_EXPIRES = timedelta(seconds=int(os.getenv("JWT_ACCESS_TOKEN_EXPIRES", 60 * 60)))
-    JWT_REFRESH_TOKEN_EXPIRES = timedelta(seconds=int(os.getenv("JWT_REFRESH_TOKEN_EXPIRES", 60 * 60 * 12)))
+    # Token de acesso: 30 minutos por padrão
+    JWT_ACCESS_TOKEN_EXPIRES = timedelta(seconds=int(os.getenv("JWT_ACCESS_TOKEN_EXPIRES") or 60*60*30))
 
-    
+    # Token de refrescagem: 24 horas por padrão
+    JWT_REFRESH_TOKEN_EXPIRES = timedelta(seconds=int(os.getenv("JWT_REFRESH_TOKEN_EXPIRES") or 60*60*60*24)) 
+
+    JWT_TOKEN_LOCATION = ["cookies"]
+    JWT_COOKIE_SECURE = os.getenv("ENV") == "production"
+    JWT_COOKIE_SAMESITE = "Lax"
+    JWT_ACCESS_COOKIE_PATH = "/"
+    JWT_REFRESH_COOKIE_PATH = "/auth/refresh"

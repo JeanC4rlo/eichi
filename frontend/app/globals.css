@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme inline {
+    --font-heading: var(--font-funnel);
+    --font-body: var(--font-inter);
+    --font-code: var(--font-fira);
+}

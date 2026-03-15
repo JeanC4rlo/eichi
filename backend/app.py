@@ -1,11 +1,19 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from config import Config
 from extensions import db, jwt
-from routes import auth_bp
+from routes import auth_bp, user_bp
 
 def create_app():
     app = Flask(__name__)
+    
+    origins = os.getenv("FRONTEND_URLS", "").split(",")
+    CORS(
+        app,
+        origins=origins,
+        supports_credentials=True
+    )
 
     app.config.from_object(Config)
     app.config.from_prefixed_env()
@@ -14,6 +22,7 @@ def create_app():
     jwt.init_app(app)
 
     app.register_blueprint(auth_bp)
+    app.register_blueprint(user_bp)
 
     with app.app_context():
         if not os.getenv("FLASK_ENV") == "production":

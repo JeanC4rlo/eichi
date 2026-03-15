@@ -5,9 +5,9 @@ from sqlalchemy import or_
 
 def register_user_service(username, email, password):
     if User.query.filter_by(username=username).first():
-        raise ValueError("O username " + username + " já está em uso")
+        raise ValueError(f"O username {username} já está em uso")
     if User.query.filter_by(email=email).first():
-        raise ValueError("O email " + email + "já está em uso")
+        raise ValueError(f"O email {email} já está em uso")
     
     user = User(
         username=username,
